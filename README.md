@@ -15,11 +15,11 @@ yarn add @vtex-components/drawer
 ```tsx
 import React, { Component } from 'react'
 
-import Drawer from '@vtex-components/drawer'
+import MyComponent from '@vtex-components/drawer'
 
 class Example extends Component {
   render() {
-    return <Drawer />
+    return <MyComponent />
   }
 }
 ```
