@@ -1,10 +1,8 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+import React from 'react'
+import { Box } from 'theme-ui'
 
-interface Props {
-  text: string
+const Drawer = () => {
+  return <Box>Its my Drawer</Box>
 }
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export default Drawer
