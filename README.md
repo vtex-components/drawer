@@ -1,13 +1,13 @@
-# drawer
+# Drawer
 
 > Drawer component for react
 
-[![NPM](https://img.shields.io/npm/v/drawer.svg)](https://www.npmjs.com/package/drawer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@vtex-components/drawer.svg)](https://www.npmjs.com/package/@vtex-components/drawer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save drawer
+yarn add @vtex-components/drawer
 ```
 
 ## Usage
@@ -15,12 +15,11 @@ npm install --save drawer
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'drawer'
-import 'drawer/dist/index.css'
+import Drawer from '@vtex-components/drawer'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Drawer />
   }
 }
 ```
