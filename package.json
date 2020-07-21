@@ -15,9 +15,9 @@
     "dist"
   ],
   "scripts": {
-    "develop": "microbundle-crl watch --no-compress --format modern,cjs",
+    "develop": "microbundle-crl watch --format modern,cjs",
     "start": "start-storybook -p 9009",
-    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "build": "microbundle-crl --format modern,cjs",
     "build:storybook": "build-storybook",
     "lint": "eslint --ext .js,.tsx,.jsx,.ts .",
     "prepare": "run-s build"
