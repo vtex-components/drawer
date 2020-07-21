@@ -6,21 +6,23 @@
   "license": "MIT",
   "repository": "vtex-components/drawer",
   "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.tsx",
+  "typings": "dist/index.d.ts",
+  "module": "dist/drawer.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "engines": {
     "node": ">=10"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "start": "microbundle-crl watch --format modern,cjs",
-    "develop": "start-storybook -p 9009",
-    "build": "microbundle-crl --format modern,cjs",
-    "build:storybook": "build-storybook",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
     "lint": "eslint --ext .js,.tsx,.jsx,.ts .",
-    "prepare": "run-s build"
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "sideEffects": false,
   "peerDependencies": {
@@ -40,8 +42,6 @@
     "@vtex/prettier-config": "^0.3.1",
     "@vtex/tsconfig": "^0.5.0",
     "eslint-config-vtex-react": "^6.7.0",
-    "microbundle-crl": "^0.13.10",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -49,6 +49,7 @@
     "reakit": "^1.1.2",
     "theme-ui": "^0.3.1",
     "ts-loader": "^8.0.1",
+    "tsdx": "^0.13.2",
     "typescript": "^3.9.6"
   }
 }
