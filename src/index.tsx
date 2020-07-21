@@ -36,8 +36,8 @@ const Drawer: FC<Props> = (props) => {
 
   const widthValue =
     placement === 'left' || placement === 'right'
-      ? { width }
-      : { height: width }
+      ? { maxWidth: width, width: '100%' }
+      : { maxHeight: width, height: '100%' }
 
   return ReactDOM.createPortal(
     <Box variant={prefixClassName}>
