@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { Box } from 'theme-ui'
 
@@ -19,6 +19,14 @@ const Drawer: FC<Props> = (props) => {
     placement = 'left',
     width = 300,
   } = props
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
 
   const prefixClassName = `${prefix}-drawer`
 
