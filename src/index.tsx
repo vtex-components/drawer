@@ -23,7 +23,9 @@ const Drawer: FC<Props> = (props) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
-    } else {
+    }
+
+    return () => {
       document.body.style.overflow = ''
     }
   }, [isOpen])
