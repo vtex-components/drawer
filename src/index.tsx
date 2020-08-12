@@ -4,7 +4,7 @@ import { Box } from 'theme-ui'
 
 import { placementValue } from './util'
 
-interface Props {
+export interface DrawerProps {
   variant?: string
   placement?: 'top' | 'left' | 'bottom' | 'right'
   isOpen: boolean
@@ -12,7 +12,7 @@ interface Props {
   onClose?: () => void
 }
 
-const Drawer: FC<Props> = ({
+const Drawer: FC<DrawerProps> = ({
   variant,
   isOpen = false,
   placement = 'left',
