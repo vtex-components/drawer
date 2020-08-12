@@ -5,21 +5,21 @@ import { Box } from 'theme-ui'
 import { placementValue } from './util'
 
 interface Props {
-  prefix?: string
+  variant?: string
   placement?: 'top' | 'left' | 'bottom' | 'right'
   isOpen: boolean
   width?: number
   onClose?: () => void
 }
 
-const Drawer: FC<Props> = (props) => {
-  const {
-    prefix = 'vtex-components',
-    isOpen = false,
-    placement = 'left',
-    width = 300,
-  } = props
-
+const Drawer: FC<Props> = ({
+  variant,
+  isOpen = false,
+  placement = 'left',
+  width = 300,
+  children,
+  onClose,
+}) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -30,7 +30,7 @@ const Drawer: FC<Props> = (props) => {
     }
   }, [isOpen])
 
-  const prefixClassName = `${prefix}-drawer`
+  const customVariant = variant ? `${variant}.drawer` : 'drawer'
 
   if (!isOpen) {
     return null
@@ -42,22 +42,21 @@ const Drawer: FC<Props> = (props) => {
       : { maxHeight: width, height: '100%' }
 
   return ReactDOM.createPortal(
-    <Box variant={prefixClassName}>
+    <Box variant={customVariant}>
       <Box
-        variant={`${prefixClassName}-container`}
+        variant={`${customVariant}.container`}
         sx={{
-          bg: 'background',
           position: 'absolute',
           zIndex: 1,
           ...widthValue,
           ...placementValue(placement),
         }}
       >
-        {props.children}
+        {children}
       </Box>
       <Box
-        variant={`${prefixClassName}-mask`}
-        onClick={props.onClose}
+        variant={`${customVariant}.mask`}
+        onClick={onClose}
         sx={{
           bg: 'primary',
           position: 'fixed',
