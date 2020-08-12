@@ -1,23 +1,11 @@
 import React, { FC } from 'react'
-import { ThemeProvider } from 'theme-ui'
 
 import Drawer from '../src'
+import { Provider } from './Provider'
 
 export default {
   title: 'Placement',
   component: Drawer,
-}
-
-const Provider: FC = ({ children }) => {
-  const theme = {
-    colors: {
-      text: '#000',
-      background: '#fff',
-      primary: '#07c',
-    },
-  }
-
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
 
 const MyComponent: FC<{ placement: 'top' | 'left' | 'bottom' | 'right' }> = ({

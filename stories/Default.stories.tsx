@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Flex } from 'theme-ui'
 
 import Drawer from '../src'
-import { Provider } from './example'
+import { Provider } from './Provider'
 
 export default {
   title: 'Drawer',
