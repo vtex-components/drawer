@@ -46,7 +46,7 @@ const Drawer: FC<DrawerProps> = ({
       <Box
         variant={`${customVariant}.container`}
         sx={{
-          position: 'absolute',
+          position: 'fixed',
           zIndex: 1,
           ...widthValue,
           ...placementValue(placement),
