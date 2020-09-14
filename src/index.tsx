@@ -47,7 +47,6 @@ const Drawer: FC<DrawerProps> = ({
         variant={`${customVariant}.container`}
         sx={{
           position: 'fixed',
-          zIndex: 1,
           ...widthValue,
           ...placementValue(placement),
         }}
@@ -58,13 +57,11 @@ const Drawer: FC<DrawerProps> = ({
         variant={`${customVariant}.mask`}
         onClick={onClose}
         sx={{
-          bg: 'primary',
           position: 'fixed',
           top: 0,
           left: 0,
           bottom: 0,
           right: 0,
-          opacity: 0.5,
         }}
       />
     </Box>,

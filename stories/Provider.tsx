@@ -10,6 +10,11 @@ export const theme = {
   drawer: {
     container: {
       bg: 'background',
+      zIndex: 1,
+    },
+    mask: {
+      bg: 'primary',
+      opacity: 0.5,
     },
   },
 }
